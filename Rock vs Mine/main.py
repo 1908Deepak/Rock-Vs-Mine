@@ -13,7 +13,7 @@ import joblib
 import os
 
 
-def load_data(path="sonardata.csv"):
+def load_data(path="Rock vs Mine/sonardata.csv"):
     """Load Sonar dataset."""
     df = pd.read_csv(path, header=None)
     return df
@@ -41,7 +41,7 @@ def train_model(df: pd.DataFrame):
     return model
 
 
-def save_model(model, path="model.joblib"):
+def save_model(model, path="Rock vs Mine/model.joblib"):
     """Save trained model to disk."""
     joblib.dump(model, path)
     print(f"💾 Model saved at {path}")
@@ -49,7 +49,7 @@ def save_model(model, path="model.joblib"):
 
 if __name__ == "__main__":
     # Ensure dataset exists
-    if not os.path.exists("sonardata.csv"):
+    if not os.path.exists("Rock vs Mine/sonardata.csv"):
         raise FileNotFoundError("Dataset 'sonar.csv' not found!")
 
     df = load_data()
