@@ -11,7 +11,7 @@ import os
 
 
 @st.cache_resource
-def load_model(path="model.joblib"):
+def load_model(path="Rock vs Mine/model.joblib"):
     """Load trained model from file."""
     if not os.path.exists(path):
         st.error("❌ Model file not found. Run main.py to train the model first.")
